@@ -26,6 +26,7 @@ function ProductView() {
       <h1 className="text-center text-3xl font-bold tracking-wider  my-4">
         Products:
       </h1>
+
       <div className="text-center flex justify-center gap-5 sm:flex-col sm:mx-4">
         <input
           type="text"
@@ -45,6 +46,10 @@ function ProductView() {
           <option value="electronics">electronics</option>
         </select>
       </div>
+
+      {products.filter.length === 0 && (
+        <p className="text-center mt-5 font-bold text-red-500">Not found !!!</p>
+      )}
 
       {products.loading && (
         <p className="text-center font-bold text-red-600">Loading...</p>

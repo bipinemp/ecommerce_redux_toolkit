@@ -44,9 +44,7 @@ const productsSlice = createSlice({
       const searchedProduct = state.products.filter((prod) =>
         prod.title.toLowerCase().includes(action.payload)
       );
-      if (searchedProduct) {
-        state.filter = searchedProduct;
-      }
+      state.filter = searchedProduct;
     },
   },
   extraReducers: (builder) => {
